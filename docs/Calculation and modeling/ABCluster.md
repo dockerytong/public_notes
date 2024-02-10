@@ -2,6 +2,7 @@
 # 1 Introduction
 ABCluster is one of the most **successful, powerful, and popular** program for the global optimization of chemical cluster structures. The essential **artificial bee colony** algorithm of ABCluster enables the following tasks to be routine for every chemist:  
 ABCluster 是用于全局优化化学团簇结构的最成功、最强大和最受欢迎的程序之一。ABCluster 的基本人工蜂群算法使以下任务成为每个化学家的常规任务：
+
 - **Conformation search for molecules:** find the conformation of the lowest energy for a flexible molecule (both bond rotations and ring deformations can be considered);  
     分子构象搜索：求柔性分子最低能的构象（键旋转和环形变均可考虑）;
 - **Global optimization of clusters:** find the structure of the lowest energy for the aggregates of any rigid and flexible structural units;  
@@ -10,6 +11,7 @@ ABCluster 是用于全局优化化学团簇结构的最成功、最强大和最�
     结构采样：在势能面上取样，生成高多样性的结构;
 - **Structure generator:** rapidly generate clusters of assigned flexibilities (some bond rotations can be frozen) and complicated topology (like bi-phase, micelle, ligated) for subsequent studies.  
     结构发生器：快速生成指定柔性（某些键旋转可以冻结）和复杂拓扑（如双相、胶束、连接）的簇，用于后续研究。
+    
 最新版本的 ABCluster 可以从以下位置获得： [http://www.zhjun-sci.com/software-abcluster-download.php](http://www.zhjun-sci.com/software-abcluster-download.php)
 
 # 2 ABCluster Citation
