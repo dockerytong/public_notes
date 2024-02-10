@@ -1,4 +1,4 @@
-# 1 介绍
+# 1 Hubbard U and V
 
 参考[链接](http://theossrv1.epfl.ch/Main/DFTHubbard)
 
