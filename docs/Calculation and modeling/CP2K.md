@@ -115,3 +115,7 @@ Kohn-Sham density functional theory (KS-DFT)
 	- you should use MIXING and decrease the ALPHA value (0.2--0.05 would do). As a second step, try LEVEL_SHIFT (0.1--2 a.u.). 您应该使用 MIX 并降低 ALPHA 值（0.2--0.05 就可以了）。
 	- After that, I would try MIXING%METHOD KERKER_MIXING with BETA ca. 1.5 and probably smearing. 第二步，尝试LEVEL_SHIFT （0.1--2 a.u.）。在那之后，我会尝试 MIXING%METHOD KERKER_MIXING 与 BETA 大约 1.5 并可能进行涂抹。
 - If that doesn't help, check the sanity of the initial geometry of your system (and please show the example of the system).  如果这没有帮助，请检查系统的初始几何形状的健全性（并请显示系统的示例）。
+# 报错问题
+- 有时体系过大，cp2k运行时显示Index to radix array not found错误：
+	- 此时在脚本的&GLOBAL中加上：`EXTENDED_FFT_LENGTHS T`
+	
