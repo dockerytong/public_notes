@@ -1,2 +1,3 @@
-# Public notes from obsidian notes
+# Table of contents
 
+- [[CP2K]]
