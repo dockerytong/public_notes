@@ -1,5 +1,3 @@
-#DFT #QuantumEspresso
-
 # 1 介绍
 
 参考[链接](http://theossrv1.epfl.ch/Main/DFTHubbard)
