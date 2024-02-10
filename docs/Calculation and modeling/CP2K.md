@@ -117,5 +117,6 @@ Kohn-Sham density functional theory (KS-DFT)
 - If that doesn't help, check the sanity of the initial geometry of your system (and please show the example of the system).  如果这没有帮助，请检查系统的初始几何形状的健全性（并请显示系统的示例）。
 # 报错问题
 - 有时体系过大，cp2k运行时显示Index to radix array not found错误：
-	- 此时在脚本的&GLOBAL中加上：`EXTENDED_FFT_LENGTHS T`
+	- **问题来源** by default CP2K uses the FFT roots available in the internal  FFT library. This is currently restricted to a maximum  of 1024. Your input requires a length of about 1200.  If you compiled cp2k with an external FFT library (probably FFTW3)  you can switch on extended lengths with the keyword  EXTENDED_FFT_LENGTHS in the GLOBAL section.
+	- **解决方法** 此时在脚本的&GLOBAL中加上：`EXTENDED_FFT_LENGTHS T`
 	
