@@ -1,5 +1,5 @@
-# ABCluster
-# 1 Introduction
+# 1 ABCluster
+# 2 Introduction
 ABCluster is one of the most **successful, powerful, and popular** program for the global optimization of chemical cluster structures. The essential **artificial bee colony** algorithm of ABCluster enables the following tasks to be routine for every chemist:  
 ABCluster 是用于全局优化化学团簇结构的最成功、最强大和最受欢迎的程序之一。ABCluster 的基本人工蜂群算法使以下任务成为每个化学家的常规任务：
 
@@ -14,11 +14,11 @@ ABCluster 是用于全局优化化学团簇结构的最成功、最强大和最�
     
 最新版本的 ABCluster 可以从以下位置获得： [http://www.zhjun-sci.com/software-abcluster-download.php](http://www.zhjun-sci.com/software-abcluster-download.php)
 
-# 2 ABCluster Citation
+# 3 ABCluster Citation
 The best way to support the development of ABCluster is that in any published works using ABCluster, please include the following references:  
 - Zhang, J.; Dolg, M. [ABCluster: The Artificial Bee Colony Algorithm for Cluster Global Optimization.](https://pubs.rsc.org/en/Content/ArticleLanding/2015/CP/C5CP04060D) _Phys. Chem. Chem. Phys._ **2015**, _17_, 24173-24181.  
 - Zhang, J.; Dolg, M. [Global Optimization of Clusters of Rigid Molecules Using the Artificial Bee Colony Algorithm.](https://pubs.rsc.org/en/Content/ArticleLanding/2016/CP/C5CP06313B) _Phys. Chem. Chem. Phys._ **2016**, _18_, 3003-3010. 
-# 3 [[ABCluster]] 结合 [[CP2K]] 进行表面结构优化
+# 4 [[ABCluster]] 结合 [[CP2K]] 进行表面结构优化
 **参考**[文档链接](https://zhjun-sci.com/abcluster/doc/eg-geom-cp2k.html)
 To use CP2K with `geom`, you need two files: `misc/runCP2K.sh` and `CP2K.tmp`.
 `misc/runCP2K.sh` is a script to call CP2K. There is **ONLY 1 line** that you need to change:
@@ -65,4 +65,4 @@ To sum up, you need to change:
 - The basis sets for each element, `KIND`.
 - If you understand exactly what you are doing, you can change anywhere.
 
-# 4 ABCluster 海洋相关用途
+# 5 ABCluster 海洋相关用途
