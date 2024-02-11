@@ -1,14 +1,14 @@
 # 1 CP2K
 
-#DFT
-
 - Kohn-Sham density functional theory (KS-DFT)
 	- PlaneWaveCalculator 使用 DFT 结合范数守恒赝势或 PAW 势 [Blochl94] 来描述电子结构。该方法基于在平面波函数的基础上扩展单粒子波函数来求解Kohn-Sham方程，而不是LCAO基组。
 	- 使用LCAO的软件：GPAW、SIESTA、ABACUS、DMol3
 	- [[CP2K]]中的GPW方法
 	- [[CP2K]]中的GAPW方法
 # 2 技术细节
+
 ## 2.1 泛函
+
 - 半局域泛函（(semi)local density functionals， LDA & GGA）的缺点
 	- 热化学性质：up to 1 eV error 
 	- 结构性质：23% error
