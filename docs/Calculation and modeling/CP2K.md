@@ -155,6 +155,15 @@
 	- 结构优化  http://bbs.keinsci.com/thread-32126-1-1.html
 	- 激发态和非绝热分子动力学培训[链接](https://compchem-cybertraining.github.io/Cyber_Training_Workshop_2021/)
 		- Newton-x程序
+
+- 激发态分子动力学
+	- [非绝热分子动力学培训](https://compchem-cybertraining.github.io/Cyber_Training_Workshop_2021/)
+	- Libra程序
+		- [代码网站](https://github.com/Quantum-Dynamics-Hub/libra-code/tree/devel)
+		- [程序网站](https://quantum-dynamics-hub.github.io/libra/index.html)
+		- [介绍](http://bbs.keinsci.com/thread-34817-1-1.html)
+		- [课题组网站](https://akimovlab.github.io/index.html)
+		- [培训](https://compchem-cybertraining.github.io/Cyber_Training_Workshop_2021/_episodes/12-newtonx)
 # 4 如何增强计算的收敛？
 - If you are looking for an ultimate guide to convergence of pathological SCF cases, please consider the manual of ORCA software. Though they use a bit other SCF solvers (DIAGONALIZATION-based in the CP2K glossary), the general principles are thoroughly described and explained and especially for transition metal complexes.   如果您正在寻找病理性SCF病例收敛的终极指南，请考虑ORCA软件手册。尽管他们使用了其他一些 SCF 求解器（在 CP2K 术语表中基于对角化），但对一般原理进行了彻底的描述和解释，尤其是对于过渡金属配合物。  
 - Briefly, if you prefer OT solver, you should benefit from precondition selection (btw, FULL_SINGLE_INVERSE was the most reasonable in my hands) and from improved LINESEARCH variants.   简而言之，如果您更喜欢 OT 求解器，您应该受益于前提条件选择（顺便说一句，FULL_SINGLE_INVERSE在我手中是最合理的）和改进的 LINESEARCH 变体。  
