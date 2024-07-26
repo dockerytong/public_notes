@@ -1,0 +1,822 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ABCluster/">
+      
+      
+        <link rel="next" href="../Hubbard%20U/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>1 CP2K - public notes from obsidian vault</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-cp2k" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="public notes from obsidian vault" class="md-header__button md-logo" aria-label="public notes from obsidian vault" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            public notes from obsidian vault
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1 CP2K
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="public notes from obsidian vault" class="md-nav__button md-logo" aria-label="public notes from obsidian vault" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    public notes from obsidian vault
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Calculation and modeling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Calculation and modeling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ABCluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 ABCluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1 CP2K
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hubbard%20U/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Hubbard U and V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="1-cp2k">1 CP2K<a class="headerlink" href="#1-cp2k" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Kohn-Sham density functional theory (KS-DFT)<ul>
+<li>PlaneWaveCalculator 使用 DFT 结合范数守恒赝势或 PAW 势 [Blochl94] 来描述电子结构。该方法基于在平面波函数的基础上扩展单粒子波函数来求解Kohn-Sham方程，而不是LCAO基组。</li>
+<li>使用LCAO的软件：GPAW、SIESTA、ABACUS、DMol3</li>
+<li><a href="./">CP2K</a>中的GPW方法</li>
+<li><a href="./">CP2K</a>中的GAPW方法</li>
+</ul>
+</li>
+</ul>
+<h1 id="2">2 技术细节<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
+<h2 id="21">2.1 泛函<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
+<ul>
+<li>半局域泛函（(semi)local density functionals， LDA &amp; GGA）的缺点<ul>
+<li>热化学性质：up to 1 eV error </li>
+<li>结构性质：23% error</li>
+<li>弹性常数：10% error</li>
+<li>强关联体系：过渡金属氧化物</li>
+<li>Van der Waals bonding missing<ul>
+<li>使用DFT-D3/DFT-D4校正，或rVV等泛函解决</li>
+</ul>
+</li>
+<li>带隙问题<ul>
+<li>来源</li>
+<li>解决方法<ul>
+<li>量子蒙特卡洛</li>
+<li>后HatreeFock方法 （MP2, CI, CC）</li>
+<li>多体微扰方法<ul>
+<li><em>GW</em>近似</li>
+<li>BSE方程</li>
+</ul>
+</li>
+<li>TD-DFT</li>
+<li>杂化泛函</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>电子激发态的描述</li>
+</ul>
+</li>
+<li>杂化泛函<ul>
+<li>定义<ul>
+<li>Characterized by the admixture of a certain  amount of nonlocal Fock exchange energy to a  part of (semi)local density functional exchange  energy</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>PBE based<ul>
+<li>PBE0 无参数方法</li>
+<li>HSE03 单参数方法<ul>
+<li>与PBE0相比，Screened Coulomb kernel accelerates the convergence  of twoelectron integrals!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>B3 based<ul>
+<li>B3LYP 三参数方法</li>
+<li>B3PW91 三参数方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="22">2.2 基组和赝势<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
+<ul>
+<li>赝势<ul>
+<li>为何使用赝势<ul>
+<li>减小基组大小，有效加速计算</li>
+<li>减小电子数量，减少计算的自由度</li>
+<li>包括相对论效应（relativistic effects） </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基组<ul>
+<li>Molecular Optimized Basis Sets (MOLOPT)<ul>
+<li>currently available for H-Rn </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="23-scf">2.3 SCF<a class="headerlink" href="#23-scf" title="Permanent link">&para;</a></h2>
+<h3 id="231-ks">2.3.1 KS方程的求解方法<a class="headerlink" href="#231-ks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>轨道变换方法（Orbital Transformation (OT) Method）
+        - J. VandeVondele and J. Hutter, JCP 118 4365 (2003)</li>
+<li>对角化和OT方法的比较
+        - ![[Pasted image 20230329002921.png | 300]]</li>
+<li>其他的求解方法<ul>
+<li>局部最优块预处理共轭梯度法 (Locally Optimal Block Preconditioned Conjugate Gradient Method，LOBPCG)。LOBPCG 是用于大型对称正定 (SPD) 广义特征值问题的预处理特征值求解器。 <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.lobpcg.html">Scipy中的LOBPCG算法</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="232-mixing-method">2.3.2 mixing method<a class="headerlink" href="#232-mixing-method" title="Permanent link">&para;</a></h3>
+<ol>
+<li>BROYDEN_MIXING</li>
+<li>DIRECT_P_MIXING<ol>
+<li>Direct mixing of new and old density matrices</li>
+<li>MAX_DIIS</li>
+<li>EPS_DIIS 参数：控制开始进行 DIIS 计算的时间，默认的0.1通常太小，可以设置为0.3到0.5，提前开始 DIIS 计算</li>
+<li>DIIS（迭代子空间中的直接反演或迭代子空间的直接反演），也称为 Pulay 混合，是一种外推技术。DIIS由Peter Pulay在计算量子化学领域开发，旨在加速和稳定Hartree-Fock自洽场方法的收敛。</li>
+</ol>
+</li>
+<li>KERKER_MIXING<ol>
+<li>Mixing of the potential in reciprocal space using the Kerker damping</li>
+</ol>
+</li>
+<li>MULTISECANT_MIXING<ol>
+<li>在Multisecant scheme for mixing中，每一次自洽场迭代都会保存两个电荷密度和波函数的信息，然后根据这些信息计算一个新的混合比例，用于混合当前电荷密度和波函数的信息。这个混合比例是通过求解一个多项式方程得到的，该多项式方程的系数是根据保存的电荷密度和波函数信息计算得到的。通过使用多项式方程，Multisecant scheme for mixing可以避免使用简单的线性混合方案带来的慢收敛问题，并且可以更快地收敛到正确的自洽场解。</li>
+<li>Multisecant scheme mixing 是一种利用多项式非线性插值历史电子密度来推导下一个迭代步骤的方法。它的基本思路是:<ol>
+<li>假设在前n个迭代步骤得到的电子密度可以拟合成一个n次多项式。   </li>
+<li>根据n+1个历史步骤的电子密度,求出通过这n+1个点的n次多项式。</li>
+<li>利用这个n次多项式,在下一个点求解,得到新的电子密度。</li>
+</ol>
+</li>
+<li>这个方法的好处是：与简单线性混合相比,多项式非线性插值可以更有效地推导出一个更为自洽的电子密度。只需要存储n个历史步骤的信息,实现简单高效。在理论上等价于高级DIIS方法。可以提供比简单混合更快的收敛速度。</li>
+</ol>
+</li>
+<li>PULAY_MIXING</li>
+</ol>
+<h2 id="24">2.4 外加电荷<a class="headerlink" href="#24" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>NET_CHARGE</code> 关键字</li>
+</ul>
+<h2 id="25">2.5 安装<a class="headerlink" href="#25" title="Permanent link">&para;</a></h2>
+<h3 id="251-toolchain">2.5.1 使用 toolchain 编译<a class="headerlink" href="#251-toolchain" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://bbs.keinsci.com/thread-36200-1-1.html">openmpi编译与slurm冲突问题的解决方法</a><ul>
+<li>最终还是绕过了 slurm，编译成功。 具体而言是注释掉了 tools/toolchain/scripts/stage1/install_openmpi.sh 里第 58 -- 63 行，以及第 68 -- 69 行。</li>
+</ul>
+</li>
+<li>2023.2 2024.1 toolchain 编译没问题</li>
+</ul>
+<h3 id="252-docker">2.5.2 使用官方的 docker<a class="headerlink" href="#252-docker" title="Permanent link">&para;</a></h3>
+<h2 id="26">2.6 单点计算相关<a class="headerlink" href="#26" title="Permanent link">&para;</a></h2>
+<ul>
+<li>https://www.cp2k.org/exercises:2018_ethz_mmm:index</li>
+<li>SMEAR<ul>
+<li>为了使特殊点法用于金属体系，人们提出了一些近似处理方法。展宽方法（Smearing method）。这种方法用较为平滑的解析函数（下图）替换 θ 函数，把费米面进行展宽。随着追求精度的提高，费米面宽度<span class="arithmatex">\(\Delta \epsilon\)</span>越小，平滑函数就越接近<span class="arithmatex">\(\theta\)</span>函数。但另一方面，越接近<span class="arithmatex">\(\theta\)</span>函数，被特殊点法所忽略的误差项（第二项）就越大，这必须通过增加特殊 k 点数目来解决。因此在做金属体系的计算时，必须选用较多的 k 点。但是对于磁矩的计算，一般认为展宽方法不可靠。<strong>SMEAR的目的是将homo-lumo间的阶跃函数变为平滑函数，即允许电子的分数占据，从而增强收敛性</strong></li>
+<li>SMEAR的设置相当于设定电子的温度，但是只有当选择Fermi-Dirac smear时，设定值才准确的和温度有关系；其余展宽方式，如[[VASP]]中smear = 0 设置的Gaussian展宽，和温度无直接关系</li>
+<li>在<a href="./">CP2K</a>中，加入SMEAR section，但是不选择method时，默认的method为<code>energy——window</code>，所以一般需要额外设置<code>METHOD  FERMI_DIRAC</code>参数</li>
+<li>
+<div class="arithmatex">\[\lim_{\Delta \epsilon\to 0} \theta'(\Delta \epsilon, \epsilon) = \theta (\epsilon)\]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>DFT + U</p>
+<ul>
+<li><a href="../Hubbard%20U/">Hubbard U</a></li>
+<li>纯泛函对强相关的描述不好，常用处理方法是进行 DFT+U 计算，即对交换相关项进行校正</li>
+<li>将 s、p 电子与 d、f 电子分开考虑</li>
+<li>常将校正添加到 d 电子中，如过渡金属氧化物</li>
+<li>效果依赖于 U 参数的选取，化学环境对 U 有严重影响</li>
+</ul>
+</li>
+<li>
+<p>平面波截断能能</p>
+<ul>
+<li>CUTOFF 默认 280 Ry</li>
+<li>REL_CUTOFF 默认 40 Ry</li>
+<li>NGRIDS 默认 4</li>
+<li>PROGRESSION_FACTOR 默认 3</li>
+<li>MULTIGRID_SET 默认 False</li>
+</ul>
+</li>
+<li>
+<p>使用平面波计算非周期性边界条件</p>
+</li>
+<li>Poisson 方程的求解方法<ul>
+<li><em>Analytic</em> for spherical cutoff or cylindrical or 1-d cutoff （Marx and Hutter, Ab initio molecular dynamics, NIC Series）</li>
+<li><em>Wavelet</em> solvers （Genovese et al, JCP 2006, 125 074105）</li>
+<li>Solvers by Martyna and Tuckerman，<em>MT</em> solver （Martyna &amp; Tuckerman, JCP 1999, 110 2810-2821）</li>
+</ul>
+</li>
+</ul>
+<h3 id="261">2.6.1 磁性相关<a class="headerlink" href="#261" title="Permanent link">&para;</a></h3>
+<ul>
+<li>磁性的种类<ul>
+<li>顺磁性 抗磁性 铁磁性 反铁磁性（整体自旋多重度为 1） 亚铁磁性</li>
+</ul>
+</li>
+<li>铁磁和反铁磁都是由电子自旋贡献：<ol>
+<li>铁磁，铁磁体系中相邻的两个原子磁矩趋向于平行排列，磁有序，磁矩不为0。反铁磁，反铁磁体系中相邻的两个原子磁矩趋向于反平行，但是它和铁磁体系一样是磁有序的。虽然反铁磁材料里的原子都有强磁矩，并且排列得整整齐齐，只是一正一反所以总和为零。</li>
+<li>虽然二者在温度足够高的情况下都会发生顺磁相变而失去磁序。相变温度对于铁磁叫做居里温度(Tc)，对于反铁磁叫做奈尔温度 (TN)，温度低于居里温度表现铁磁性，高于居里温度表现为顺磁性，磁化率温度关系服从Curie-Weiss定律</li>
+<li>宏观表现为，铁磁体系对外展现磁性而反铁磁体系不展现磁性。但二者都能被磁化，并且磁化后有很强的磁性。但顺磁磁性响应很弱</li>
+<li>反铁磁材料和无磁性材料又有区别，因为反铁磁体系仍然是磁有序的，而且被磁化后仍然有很强的磁性。无磁性材料的原子磁矩主要由原子核磁矩和电子轨道角动量贡献，微观上没有磁序，被磁化后只有微弱的磁矩。</li>
+</ol>
+</li>
+<li>反铁磁性和亚铁磁性计算<ul>
+<li>需要设置原子自旋状态，越接近真实越容易收敛</li>
+<li>kind 中有两种定义方式（只影响初猜，需要同时设置 UKS，相当于 LSD）</li>
+<li>定义原子磁矩，即指定此类原子 α 与 β 电子数的差值，相当于原子的电子自旋磁矩，无法精确设置原子轨道占据状态，小数也可以设置</li>
+<li>设置 bs 字段，直接设置各个原子轨道上，α 和 β 电子的数量</li>
+<li>需要同时合理设置自选多重度</li>
+<li>反铁磁性自旋多重度为 1 ，互相抵消</li>
+</ul>
+</li>
+<li>例子<ul>
+<li>赤铁矿 （反铁磁性计算）</li>
+<li><a href="https://en.wikipedia.org/wiki/Hematite">赤铁矿</a>  通常没有磁性，因为它在 255 K 以下是反铁磁性的； 即磁矩排列方向相反，但在 948 K 时为弱铁磁体，高于此温度为顺磁体。 它在室温下对磁场没有任何吸引力。</li>
+<li>将不同层数 Fe 原子的磁矩设置为相反，并将自旋多重度设置为 1</li>
+<li>Fe 的 3d 轨道有 5 个 α 电子和 1 个 β 电子，因此将磁矩设置为 4</li>
+<li>为了检查计算的磁矩正确与否，可以计算时输出 cub 文件</li>
+<li>（输出自旋密度信息，即 α 电子的密度减去 β 电子的密度），从自旋密度图中可以考察单电子的分布情况</li>
+<li>产生的 cub 文件可直接使用 VESTA 或 VMD 程序观看</li>
+<li>使用 bs 精确设置电子组态</li>
+<li><em>教程见 day2 下午录音 215 min 处</em></li>
+<li>铁磁性 自旋多重度必大于 1</li>
+<li>铁单个原子有 5 个单电子，每个原子的自旋多重度为 5</li>
+</ul>
+</li>
+</ul>
+<h2 id="27">2.7 振动分析、振动光谱与声子<a class="headerlink" href="#27" title="Permanent link">&para;</a></h2>
+<ul>
+<li>振动分析 day 3 下午 269 min</li>
+<li>拉曼计算 <ul>
+<li>满足平移不变性的最小cutoff</li>
+<li>![[Pasted image 20230405222141.png | 400]]</li>
+<li>![[Pasted image 20230405211817.png | 400]]</li>
+<li>![[Pasted image 20230405211831.png | 400]]</li>
+</ul>
+</li>
+<li>声子计算  day 4 上午 71.31</li>
+<li></li>
+</ul>
+<h1 id="3">3 特殊的计算功能<a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<ul>
+<li>RT-TDDFT<ul>
+<li>https://www.cp2k.org/exercises:2016_summer_school:excited</li>
+</ul>
+</li>
+<li>
+<p>激发态 </p>
+<ul>
+<li>结构优化  http://bbs.keinsci.com/thread-32126-1-1.html</li>
+<li>激发态和非绝热分子动力学培训<a href="https://compchem-cybertraining.github.io/Cyber_Training_Workshop_2021/">链接</a><ul>
+<li>Newton-x程序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>激发态分子动力学</p>
+<ul>
+<li><a href="https://compchem-cybertraining.github.io/Cyber_Training_Workshop_2021/">非绝热分子动力学培训</a></li>
+<li>Libra程序<ul>
+<li><a href="https://github.com/Quantum-Dynamics-Hub/libra-code/tree/devel">代码网站</a></li>
+<li><a href="https://quantum-dynamics-hub.github.io/libra/index.html">程序网站</a></li>
+<li><a href="http://bbs.keinsci.com/thread-34817-1-1.html">介绍</a></li>
+<li><a href="https://akimovlab.github.io/index.html">课题组网站</a></li>
+<li><a href="https://compchem-cybertraining.github.io/Cyber_Training_Workshop_2021/_episodes/12-newtonx">培训</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="4">4 如何增强计算的收敛？<a class="headerlink" href="#4" title="Permanent link">&para;</a></h1>
+<ul>
+<li>If you are looking for an ultimate guide to convergence of pathological SCF cases, please consider the manual of ORCA software. Though they use a bit other SCF solvers (DIAGONALIZATION-based in the CP2K glossary), the general principles are thoroughly described and explained and especially for transition metal complexes.   如果您正在寻找病理性SCF病例收敛的终极指南，请考虑ORCA软件手册。尽管他们使用了其他一些 SCF 求解器（在 CP2K 术语表中基于对角化），但对一般原理进行了彻底的描述和解释，尤其是对于过渡金属配合物。  </li>
+<li>Briefly, if you prefer OT solver, you should benefit from precondition selection (btw, FULL_SINGLE_INVERSE was the most reasonable in my hands) and from improved LINESEARCH variants.   简而言之，如果您更喜欢 OT 求解器，您应该受益于前提条件选择（顺便说一句，FULL_SINGLE_INVERSE在我手中是最合理的）和改进的 LINESEARCH 变体。  </li>
+<li>If your use diagonalization routines (you can try both OT and DIAGONALIZATION and choose the best), 如果您使用对角化例程（您可以尝试 OT 和对角化并选择最佳），<ul>
+<li>you should use MIXING and decrease the ALPHA value (0.2--0.05 would do). As a second step, try LEVEL_SHIFT (0.1--2 a.u.). 您应该使用 MIX 并降低 ALPHA 值（0.2--0.05 就可以了）。</li>
+<li>After that, I would try MIXING%METHOD KERKER_MIXING with BETA ca. 1.5 and probably smearing. 第二步，尝试LEVEL_SHIFT （0.1--2 a.u.）。在那之后，我会尝试 MIXING%METHOD KERKER_MIXING 与 BETA 大约 1.5 并可能进行涂抹。</li>
+</ul>
+</li>
+<li>If that doesn't help, check the sanity of the initial geometry of your system (and please show the example of the system).  如果这没有帮助，请检查系统的初始几何形状的健全性（并请显示系统的示例）。</li>
+</ul>
+<h1 id="5">5 报错问题<a class="headerlink" href="#5" title="Permanent link">&para;</a></h1>
+<ul>
+<li>有时体系过大，cp2k运行时显示Index to radix array not found错误：<ul>
+<li><strong>问题来源</strong> by default CP2K uses the FFT roots available in the internal  FFT library. This is currently restricted to a maximum  of 1024. Your input requires a length of about 1200.  If you compiled cp2k with an external FFT library (probably FFTW3)  you can switch on extended lengths with the keyword  EXTENDED_FFT_LENGTHS in the GLOBAL section.</li>
+<li><strong>解决方法</strong> 此时在脚本的&amp;GLOBAL中加上：<code>EXTENDED_FFT_LENGTHS T</code></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
